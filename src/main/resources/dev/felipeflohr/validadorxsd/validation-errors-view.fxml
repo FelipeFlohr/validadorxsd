@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="290.0" layoutY="93.0" text="AAAAA" />
+   </children>
+   <content>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <top>
+            <Label text="Os seguintes erros foram encontrados:" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <TextArea fx:id="errosLog" editable="false" prefHeight="106.0" prefWidth="562.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <Button mnemonicParsing="false" text="Copiar para a área de transferência" BorderPane.alignment="CENTER" onAction="#copiarAreaTransferencia" />
+         </bottom></BorderPane>
+   </content>
+</DialogPane>

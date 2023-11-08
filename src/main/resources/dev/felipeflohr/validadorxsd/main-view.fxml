@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #242222;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.felipeflohr.validadorxsd.controllers.MainController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <children>
+      <BorderPane prefHeight="480.0" prefWidth="640.0">
+         <bottom>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="36.0" prefWidth="640.0" text="Validar" BorderPane.alignment="CENTER" onAction="#validaXsd" />
+         </bottom>
+         <top>
+            <Label text="Validador de XSD" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField layoutX="14.0" layoutY="28.0" prefHeight="24.0" prefWidth="476.0" promptText="Endereço do arquivo .XML" fx:id="xmlFileLocation" />
+                  <Label layoutX="14.0" layoutY="6.0" text="Selecione o arquivo .XML:" textFill="WHITE" />
+                  <Button layoutX="498.0" layoutY="28.0" mnemonicParsing="false" onAction="#openFileDialogXml" prefHeight="24.0" prefWidth="128.0" text="Selecione..." />
+                  <Label layoutX="14.0" layoutY="79.0" text="Selecione o arquivo .XSD:" textFill="WHITE" />
+                  <TextField layoutX="14.0" layoutY="95.0" prefHeight="24.0" prefWidth="476.0" promptText="Endereço do arquivo .XSD" fx:id="xsdFileLocation" />
+                  <Button layoutX="498.0" layoutY="95.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="128.0" text="Selecione..." onAction="#openFileDialogXsd" />
+                  <Label layoutX="8.0" layoutY="160.0" prefHeight="52.0" prefWidth="625.0" text="Observação: certifique-se de que todos os tipos necessários para a validação do XSD estejam na mesma pasta ou em pastas filhas á pasta do XSD" textFill="WHITE" wrapText="true" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
